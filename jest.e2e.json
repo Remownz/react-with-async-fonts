@@ -1,7 +1,12 @@
 {
   "moduleFileExtensions": ["js", "json", "ts", "tsx"],
   "transform": {
-    "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    "^.+\\.(ts|tsx)$": "ts-jest"
   },
-  "testMatch": ["<rootDir>/test/**/*.spec.ts"]
+  "testMatch": ["<rootDir>/test/**/*.spec.ts"],
+  "globals": {
+    "ts-jest": {
+      "diagnostics": false
+    }
+  }
 }
